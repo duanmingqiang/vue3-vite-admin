@@ -1,12 +1,12 @@
 <template>
   <div>
-      hello test1
-      <el-table :data="tableData" id="table">
-        <el-table-column prop="test"></el-table-column>
-      </el-table>
-      <el-button @click="handleClick">
-        截图
-      </el-button>
+    hello test1
+    <el-table :data="tableData" id="table">
+      <el-table-column prop="test" />
+    </el-table>
+    <el-button @click="handleClick">
+      截图
+    </el-button>
   </div>
 </template>
 

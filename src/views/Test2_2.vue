@@ -1,6 +1,6 @@
 <template>
   <div>
-      hello test1_22222
+    hello test1_22222
   </div>
 </template>
 
