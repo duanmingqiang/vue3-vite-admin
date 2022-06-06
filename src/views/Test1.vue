@@ -1,7 +1,10 @@
 <template>
   <div>
     hello test1
-    <el-table :data="tableData" id="table">
+    <el-table
+      id="table"
+      :data="tableData"
+    >
       <el-table-column prop="test" />
     </el-table>
     <el-button @click="handleClick">
@@ -11,7 +14,7 @@
 </template>
 
 <script>
-import html2canvas from 'html2canvas'
+import html2canvas from 'html2canvas';
 export default {
   data() {
     return {
@@ -25,8 +28,8 @@ export default {
   methods: {
     handleClick() {
       html2canvas(document.getElementById('table')).then((canvas) => {
-        console.log(canvas.toDataURL())
-        window.aaa = canvas
+        console.log(canvas.toDataURL());
+        window.aaa = canvas;
       })
     }
   }

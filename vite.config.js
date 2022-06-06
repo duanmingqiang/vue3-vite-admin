@@ -1,7 +1,6 @@
-import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
+import { defineConfig } from 'vite'
 import { viteMockServe } from 'vite-plugin-mock'
-import styleImport from 'vite-plugin-style-import'
 const { resolve } = require('path')
 
 // https://vitejs.dev/config/
