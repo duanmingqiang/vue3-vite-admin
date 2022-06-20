@@ -1,18 +1,13 @@
-import {createStore} from 'vuex'
 import {
-    userLogin,
-    userLogout,
-    getUserInfo
+    getUserInfo, userLogin,
+    userLogout
 } from '@/api/user'
 import {
-    setToken,
-    getToken,
-    removeToken
+    removeToken, setToken
 } from '@/utils/cookie'
+import { createStore } from 'vuex'
 import {
-    commonRoute,
-    asyncRoutes,
-    notFoundRoute,
+    asyncRoutes, commonRoute, notFoundRoute,
     resetRouter
 } from '../routers'
 
@@ -23,7 +18,7 @@ function hasPermission(routesName, route) {
 function filterAsyncRoute(routesName, asyncRoutes) {
     const tempData = []
     asyncRoutes.forEach(route => {
-        console.log('666')
+        // console.log('666')
         if (hasPermission(routesName, route)) {
             if (route.children && route.children.length) {
                 route.children = filterAsyncRoute(routesName, route.children)

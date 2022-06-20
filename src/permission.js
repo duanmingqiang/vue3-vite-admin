@@ -5,7 +5,7 @@ import {
 import store from './store/index'
 router.beforeEach(async (to, from) => {
     // to and from are both route objects. must call `next`.
-    console.log('已加载路由', router.getRoutes())
+    // console.log('已加载路由', router.getRoutes())
     const hasToken = getToken()
     if (hasToken) {
         if (to.path === '/login') {
